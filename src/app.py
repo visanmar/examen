@@ -34,7 +34,16 @@ mysql_conn = {
 ### 'charset': utf8mb4,
 ### 'collation': utf8mb4_unicode_ci
 
-mydb = mysql.connector.connect(**mysql_conn)
+#mydb = mysql.connector.connect(**mysql_conn)
+mydb = mysql.connector.connect(host='bawlkfqub64ro1je45jx-mysql.services.clever-cloud.com',
+    port='3306',
+    user='uknesanttj2c8rc4',
+    passwd='oAQZBvmnYL8IzgSwjquh',
+    database='bawlkfqub64ro1je45jx',
+    charset='utf8mb4',
+    collation='utf8mb4_unicode_ci'
+)
+
 
 
 
