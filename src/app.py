@@ -4,7 +4,6 @@ from dotenv import load_dotenv
 from flask_pymongo import PyMongo
 import os
 import mysql.connector
-from urllib.parse import quote_plus
 
 
 load_dotenv()
@@ -12,8 +11,8 @@ load_dotenv()
 
 app = Flask(__name__)
 
-username = quote_plus( os.getenv('MONGO_USERNAME') )
-password = quote_plus( os.getenv('MONGO_PASSWORD') )
+username = os.getenv('MONGO_USERNAME')
+password = os.getenv('MONGO_PASSWORD')
 cluster = os.getenv('MONGO_CLUSTER')
 
 app.config['MONGO_URI'] = 'mongodb+srv://' + username + ':' + password + '@cluster0.kewqy.mongodb.net/listacliente?retryWrites=true&w=majority&appName=Cluster0'
