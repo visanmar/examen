@@ -16,7 +16,6 @@ password = os.getenv('MONGO_PASSWORD')
 cluster = os.getenv('MONGO_CLUSTER')
 
 app.config['MONGO_URI'] = 'mongodb+srv://' + username + ':' + password + '@cluster0.kewqy.mongodb.net/listacliente?retryWrites=true&w=majority&appName=Cluster0'
-#app.config['MONGO_URI'] = 'mongodb+srv://visanmar:Uy9AEiw9zHpIK0Uh@cluster0.kewqy.mongodb.net/listacliente?retryWrites=true&w=majority&appName=Cluster0'
 mongo = PyMongo(app)
 
 
@@ -30,19 +29,7 @@ mysql_conn = {
     'collation': os.getenv('MYSQL_COLLATION')
 }
 
-### >>> mysql.connector.errors.ProgrammingError: Collation 'utf8mb4_0900_ai_ci' unknown
-### 'charset': utf8mb4,
-### 'collation': utf8mb4_unicode_ci
-
 mydb = mysql.connector.connect(**mysql_conn)
-#mydb = mysql.connector.connect(host='bawlkfqub64ro1je45jx-mysql.services.clever-cloud.com',
-#    port='3306',
-#    user='uknesanttj2c8rc4',
-#    passwd='oAQZBvmnYL8IzgSwjquh',
-#    database='bawlkfqub64ro1je45jx',
-#    charset='utf8mb4',
-#    collation='utf8mb4_unicode_ci'
-#)
 
 
 
