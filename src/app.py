@@ -15,8 +15,8 @@ username = os.getenv('MONGO_USERNAME')
 password = os.getenv('MONGO_PASSWORD')
 cluster = os.getenv('MONGO_CLUSTER')
 
-#app.config['MONGO_URI'] = 'mongodb+srv://' + username + ':' + password + '@cluster0.kewqy.mongodb.net/listacliente?retryWrites=true&w=majority&appName=Cluster0'
-app.config['MONGO_URI'] = 'mongodb+srv://visanmar:Uy9AEiw9zHpIK0Uh@cluster0.kewqy.mongodb.net/listacliente?retryWrites=true&w=majority&appName=Cluster0'
+app.config['MONGO_URI'] = 'mongodb+srv://' + username + ':' + password + '@cluster0.kewqy.mongodb.net/listacliente?retryWrites=true&w=majority&appName=Cluster0'
+#app.config['MONGO_URI'] = 'mongodb+srv://visanmar:Uy9AEiw9zHpIK0Uh@cluster0.kewqy.mongodb.net/listacliente?retryWrites=true&w=majority&appName=Cluster0'
 mongo = PyMongo(app)
 
 
